@@ -31,7 +31,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(onBoardingFinished: () -> Unit) {
     val onBoardingItemList = OnBoardingItem.getData()
     val scope = rememberCoroutineScope()
     val pageState = rememberPagerState {
@@ -63,6 +63,8 @@ fun OnBoardingScreen() {
                     onClick = {
                         if (pageState.currentPage + 1 < onBoardingItemList.size) scope.launch {
                             pageState.animateScrollToPage(pageState.currentPage + 1)
+                        } else if (pageState.currentPage==3){
+onBoardingFinished()
                         }
                     })
             )

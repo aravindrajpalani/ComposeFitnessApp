@@ -16,3 +16,5 @@ val GradientEnd = Color(0xFFC150F6)
 val Black = Color(0xFF1D1617)
 
 val Grey1 = Color(0xFFB6B4C2)
+val Grey2 = Color(0xFFF7F8F8)
+val Grey3 = Color(0xFFADA4A5)
