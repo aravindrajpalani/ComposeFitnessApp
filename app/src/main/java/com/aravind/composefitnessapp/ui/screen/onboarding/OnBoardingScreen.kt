@@ -63,8 +63,8 @@ fun OnBoardingScreen(onBoardingFinished: () -> Unit) {
                     onClick = {
                         if (pageState.currentPage + 1 < onBoardingItemList.size) scope.launch {
                             pageState.animateScrollToPage(pageState.currentPage + 1)
-                        } else if (pageState.currentPage==3){
-onBoardingFinished()
+                        } else if (pageState.currentPage == 3) {
+                            onBoardingFinished()
                         }
                     })
             )
