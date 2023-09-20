@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.aravind.composefitnessapp.ui.screen.Screen
+import com.aravind.composefitnessapp.ui.screen.choosegoal.ChooseGoalScreen
 import com.aravind.composefitnessapp.ui.screen.completeprofile.CompleteProfileScreen
 import com.aravind.composefitnessapp.ui.screen.getstarted.GetStartedScreen
 import com.aravind.composefitnessapp.ui.screen.onboarding.OnBoardingScreen
@@ -30,7 +31,10 @@ class MainActivity : ComponentActivity() {
                         RegisterUserScreen(onRegisterSuccess ={navController.navigate(Screen.CompleteProfile.route)} )
                     }
                     composable(Screen.CompleteProfile.route) {
-                        CompleteProfileScreen()
+                        CompleteProfileScreen(onCompleteProfile = {navController.navigate(Screen.ChooseGoalScreen.route)})
+                    }
+                    composable(Screen.ChooseGoalScreen.route) {
+                        ChooseGoalScreen(onGoalConfirmed = {})
                     }
                 }
 

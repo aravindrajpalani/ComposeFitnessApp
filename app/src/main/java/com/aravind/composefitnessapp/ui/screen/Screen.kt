@@ -5,4 +5,5 @@ sealed class Screen(val route: String){
     object OnBoarding : Screen("onBoarding")
     object RegisterUser : Screen("registerUser")
     object CompleteProfile : Screen("completeProfile")
+    object ChooseGoalScreen : Screen("chooseGoalScreen")
 }
