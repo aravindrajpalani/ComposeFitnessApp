@@ -16,7 +16,11 @@ val PurpleLight = Color(0xFFF5E1FA)
 val Pink1 = Color(0xFFE769B1)
 val Black = Color(0xFF1D1617)
 
-val Grey1 = Color(0xFFB6B4C2)
+val PinkLight = Color(0xFFFFE6E6)
+
+val RedDanger = Color(0xFFFF0000)
+
+val Grey1 = Color(0xFFBBBAC4)
 val Grey2 = Color(0xFFF7F8F8)
 val Grey3 = Color(0xFFADA4A5)
 val Grey4 = Color(0xFFDEDDE0)

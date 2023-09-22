@@ -33,8 +33,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.aravind.composefitnessapp.ui.screen.BottomNavScreen
+import com.aravind.composefitnessapp.ui.screen.activitytracker.ActivityTrackerScreen
 import com.aravind.composefitnessapp.ui.screen.home.HomeScreen
 import com.aravind.composefitnessapp.ui.screen.profile.ProfileScreen
+import com.aravind.composefitnessapp.ui.screen.progressphoto.ProgressPhotoScreen
 import com.aravind.composefitnessapp.ui.theme.NoRippleTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -102,8 +104,8 @@ containerColor = Color.White,
             Modifier.padding(innerPadding)
         ) {
             composable(BottomNavScreen.Home.route) { HomeScreen() }
-            composable(BottomNavScreen.ActivityTracker.route) { HomeScreen() }
-            composable(BottomNavScreen.ProgressPhoto.route) { HomeScreen() }
+            composable(BottomNavScreen.ActivityTracker.route) { ActivityTrackerScreen() }
+            composable(BottomNavScreen.ProgressPhoto.route) { ProgressPhotoScreen() }
             composable(BottomNavScreen.Profile.route) { ProfileScreen() }
         }
     }

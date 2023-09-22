@@ -61,7 +61,7 @@ fun HomeScreen() {
             Column(
                 modifier = Modifier
                     .padding(start = 20.dp, end = 20.dp, top = 25.dp, bottom = 25.dp)
-                    .fillParentMaxHeight(1f)
+                    .wrapContentSize()
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -336,7 +336,8 @@ fun HomeScreen() {
                 Spacer(modifier = Modifier.height(22.dp))
             }
         }
-    })
+    },  modifier = Modifier
+        .fillMaxSize())
 
 }
 
